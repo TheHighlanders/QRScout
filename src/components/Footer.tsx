@@ -7,15 +7,13 @@ export function Footer() {
   return (
     <footer>
       <div className="mt-8 flex flex-col items-center justify-center p-2 gap-2">
-        <div className="h-24 w-96">
+        <div className="w-80">
           <Logo />
         </div>
         {teamNumber !== 2713 && (
           <>
             <Heart className="text-primary size-8 fill-primary" />
-            <span className="text-2xl text-primary font-rhr">
-              {teamNumber}
-            </span>
+            <span className="text-2xl text-primary font-rhr">{teamNumber}</span>
           </>
         )}
       </div>
