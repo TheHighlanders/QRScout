@@ -1,6 +1,6 @@
 {
   "title": "QRScout",
-  "page_title": "Rebuilt",
+  "page_title": "REBUILT",
   "delimiter": "\t",
   "teamNumber": 6201,
   "floatingField": {
@@ -63,7 +63,7 @@
   },
   "sections": [
     {
-      "name": "Prematch",
+      "name": "PREMATCH",
       "fields": [
         {
           "title": "Scouter Initials",
@@ -153,7 +153,7 @@
       ]
     },
     {
-      "name": "Autonomous",
+      "name": "AUTONOMOUS",
       "fields": [
         {
           "title": "Actions",
@@ -235,7 +235,7 @@
       ]
     },
     {
-      "name": "Teleop",
+      "name": "TELEOP",
       "fields": [
         {
           "title": "Alliance won auto?",
@@ -301,7 +301,7 @@
       ]
     },
     {
-      "name": "Endgame",
+      "name": "ENDGAME",
       "fields": [
         {
           "title": "Climbed?",
@@ -337,7 +337,7 @@
       ]
     },
     {
-      "name": "Postmatch",
+      "name": "POSTMATCH",
       "fields": [
         {
           "title": "Scoring Accuracy (in 20% steps)",
