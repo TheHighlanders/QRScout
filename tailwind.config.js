@@ -8,6 +8,10 @@ module.exports = {
   				'A4SPEED-Bold',
   				'sans-serif'
   			],
+			'rhr-ns': [
+  				'A4SPEED-Bold',
+  				'sans-serif'
+  			]
   		},
   		colors: {
   			red: {
