@@ -11,7 +11,7 @@ const strokeStyle = {
 const style2 = {
   ...defaultStyle,
   fontSize: '74.7706px',
-  fontFamily: 'SF Sports Night',
+  fontFamily: 'A4SPEED-Bold',
   ...strokeStyle,
 };
 
@@ -24,7 +24,7 @@ const style3 = {
 const style4 = {
   ...defaultStyle,
   fontSize: '21.0016px',
-  fontFamily: 'SF Sports Night NS',
+  fontFamily: 'A4SPEED-Bold',
   ...strokeStyle,
 };
 

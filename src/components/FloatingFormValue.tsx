@@ -26,7 +26,7 @@ export function FloatingFormValue() {
             ? String((rawValue as { teamNumber: number }).teamNumber)
             : rawValue;
 
-    const className = "sticky top-5 w-1/2 sm:w-full space-y-1.5 p-2 bg-primary mb-2 rounded-xl leading-none text-primary-foreground font-rhr-ns block";
+    const className = "sticky top-5 w-1/2 sm:w-full space-y-1.5 p-2 bg-primary mb-2 rounded-xl leading-none text-primary-foreground font-rhr block";
     
     return (
         <div className={className}>
