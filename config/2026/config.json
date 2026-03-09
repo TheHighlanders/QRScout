@@ -377,7 +377,7 @@
           "choices": {
             "No Show": "No Show",
             "Brown Out": "Browned Out",
-            "XPin": "Excessive Pinning",
+            "Excessive Pinning": "Excessive Pinning",
             "Tipped": "Tipped/Fell Over",
             "Mechanical Issue": "Mechanical Issue",
             "Died": "Died",
@@ -397,18 +397,18 @@
           "choices": {
             "Good Defense": "Good Defense",
             "Bad Defense": "Bad Defense",
-            "Inneffective Defense": "Inneffective Defense",
+            "Ineffective Defense": "Ineffective Defense",
             "Slow Driving": "Slow Driving",
             "Fast Driving": "Fast Driving",
             "Fuel Dropped": "Fuel Dropped",
             "Accurate Shots": "Accurate Shots",
             "Inaccurate Shots": "Inaccurate Shots",
-            "sIntake": "Slow Intake",
-            "fIntake": "Fast Intake",
-            "sScoring": "Slow Scoring",
-            "fScoring": "Fast Scoring",
-            "fClimb": "Fast Climb"
-            "sClimb": "Slow Climb"
+            "Slow Intake": "Slow Intake",
+            "Fast Intake": "Fast Intake",
+            "Slow Scoring": "Slow Scoring",
+            "Fast Scoring": "Fast Scoring",
+            "Fast Climb": "Fast Climb",
+            "Slow Climb": "Slow Climb"
           }
         },
         {
