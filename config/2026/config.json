@@ -1,6 +1,6 @@
 {
   "title": "QRScout",
-  "page_title": "REBUILT",
+  "page_title": "Rebuilt",
   "delimiter": "\t",
   "teamNumber": 6201,
   "floatingField": {
@@ -287,16 +287,6 @@
           ],
           "timerDuration": 135,
           "autoStopSeconds": 150
-        },
-        {
-          "title": "Total Penalities:",
-          "description": "How many penalties did this robot get?",
-          "type": "counter",
-          "required": false,
-          "code": "penaltyCount",
-          "formResetBehavior": "reset",
-          "defaultValue": 0,
-          "step": 1
         }
       ]
     },
@@ -387,10 +377,7 @@
           "choices": {
             "No Show": "No Show",
             "Brown Out": "Browned Out",
-            "MinorFT": "Minor Foul in Teleop",
-            "MajorFT": "Major Foul in Teleop",
-            "MinorFA": "Minor Foul in Auto",
-            "MajorFA": "Major Foul in Auto",
+            "XPin": "Excessive Pinning",
             "Tipped": "Tipped/Fell Over",
             "Mechanical Issue": "Mechanical Issue",
             "Died": "Died",
@@ -416,11 +403,12 @@
             "Fuel Dropped": "Fuel Dropped",
             "Accurate Shots": "Accurate Shots",
             "Inaccurate Shots": "Inaccurate Shots",
-            "Slow Intake": "Slow Intake",
-            "Fast Intake": "Fast Intake",
-            "Slow Scoring": "Slow Scoring",
-            "Fast Scoring": "Fast Scoring",
-            "Fast Climb": "Fast Climb"
+            "sIntake": "Slow Intake",
+            "fIntake": "Fast Intake",
+            "sScoring": "Slow Scoring",
+            "fScoring": "Fast Scoring",
+            "fClimb": "Fast Climb"
+            "sClimb": "Slow Climb"
           }
         },
         {
