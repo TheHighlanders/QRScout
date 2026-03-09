@@ -67,7 +67,7 @@
       "fields": [
         {
           "title": "Scouter Initials",
-          "description": "Enter the initials of the scouter.",
+          "description": "Enter the initials of the scouter:",
           "type": "text",
           "required": true,
           "code": "scouter",
