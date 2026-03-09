@@ -277,10 +277,6 @@
               "code": "defense"
             },
             {
-              "label": "Stuck on Fuel",
-              "code": "Stuck on Fuel"
-            },
-            {
               "label": "Robot Inactive",
               "code": "robot inactive"
             }
@@ -376,7 +372,7 @@
           "formResetBehavior": "reset",
           "choices": {
             "No Show": "No Show",
-            "Brown Out": "Browned Out",
+            "Brown Out": "Stuttering/Browned Out",
             "Excessive Pinning": "Excessive Pinning",
             "Tipped": "Tipped/Fell Over",
             "Mechanical Issue": "Mechanical Issue",
