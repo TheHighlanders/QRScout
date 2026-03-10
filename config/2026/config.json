@@ -1,8 +1,8 @@
 {
   "title": "QRScout",
-  "page_title": "REBUILT",
+  "page_title": "Rebuilt",
   "delimiter": "\t",
-  "teamNumber": 6201,
+  "teamNumber": 6328,
   "floatingField": {
     "show": false,
     "codeValue": "teamNumber"
@@ -67,7 +67,7 @@
       "fields": [
         {
           "title": "Scouter Initials",
-          "description": "Enter the initials of the scouter.",
+          "description": "Enter the initials of the scouter:",
           "type": "text",
           "required": true,
           "code": "scouter",
@@ -277,26 +277,12 @@
               "code": "defense"
             },
             {
-              "label": "Stuck on Fuel",
-              "code": "Stuck on Fuel"
-            },
-            {
               "label": "Robot Inactive",
               "code": "robot inactive"
             }
           ],
           "timerDuration": 135,
           "autoStopSeconds": 150
-        },
-        {
-          "title": "Total Penalities:",
-          "description": "How many penalties did this robot get?",
-          "type": "counter",
-          "required": false,
-          "code": "penaltyCount",
-          "formResetBehavior": "reset",
-          "defaultValue": 0,
-          "step": 1
         }
       ]
     },
@@ -386,11 +372,8 @@
           "formResetBehavior": "reset",
           "choices": {
             "No Show": "No Show",
-            "Brown Out": "Browned Out",
-            "MinorFT": "Minor Foul in Teleop",
-            "MajorFT": "Major Foul in Teleop",
-            "MinorFA": "Minor Foul in Auto",
-            "MajorFA": "Major Foul in Auto",
+            "Brown Out": "Stuttering/Browned Out",
+            "Excessive Pinning": "Excessive Pinning",
             "Tipped": "Tipped/Fell Over",
             "Mechanical Issue": "Mechanical Issue",
             "Died": "Died",
@@ -410,7 +393,6 @@
           "choices": {
             "Good Defense": "Good Defense",
             "Bad Defense": "Bad Defense",
-            "Inneffective Defense": "Inneffective Defense",
             "Slow Driving": "Slow Driving",
             "Fast Driving": "Fast Driving",
             "Fuel Dropped": "Fuel Dropped",
@@ -420,7 +402,8 @@
             "Fast Intake": "Fast Intake",
             "Slow Scoring": "Slow Scoring",
             "Fast Scoring": "Fast Scoring",
-            "Fast Climb": "Fast Climb"
+            "Fast Climb": "Fast Climb",
+            "Slow Climb": "Slow Climb"
           }
         },
         {

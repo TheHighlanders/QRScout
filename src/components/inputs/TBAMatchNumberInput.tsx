@@ -31,7 +31,7 @@ export default function TBAMatchNumberInput(props: ConfigurableInputProps) {
     }
 
     const qualificationMatches = matchData.filter(
-      match => match.comp_level === 'qm'
+      match => match.comp_level === 'qm',
     );
 
     const matchNumbers = qualificationMatches
@@ -53,13 +53,14 @@ export default function TBAMatchNumberInput(props: ConfigurableInputProps) {
         return;
       }
       if (data.formResetBehavior === 'increment') {
-        const newValue = (value == '') ? value : value + 1;
-        setValue(newValue);
+        setValue(prev =>
+          typeof prev === 'number' ? prev + 1 : data.defaultValue,
+        );
         return;
       }
       setValue(data.defaultValue);
     },
-    [data.defaultValue, data.formResetBehavior, value],
+    [data.defaultValue, data.formResetBehavior],
   );
 
   useEvent('resetFields', resetState);
@@ -67,7 +68,6 @@ export default function TBAMatchNumberInput(props: ConfigurableInputProps) {
   useEffect(() => {
     updateValue(props.code, value);
   }, [value, props.code]);
-
 
   const handleSelectChange = useCallback((value: string) => {
     setValue(Number(value));
@@ -103,7 +103,7 @@ export default function TBAMatchNumberInput(props: ConfigurableInputProps) {
       id={data.title}
       min={data.min}
       max={data.max}
-      onChange={(e) => {
+      onChange={e => {
         const parsed = Number(e.target.value);
         if (e.target.value === '') {
           setValue('');
