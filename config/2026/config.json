@@ -2,7 +2,7 @@
   "title": "QRScout",
   "page_title": "Rebuilt",
   "delimiter": "\t",
-  "teamNumber": 3467.6201,
+  "teamNumber": 3467,
   "floatingField": {
     "show": false,
     "codeValue": "teamNumber"
@@ -73,6 +73,23 @@
           "code": "scouter",
           "formResetBehavior": "preserve",
           "defaultValue": ""
+        },
+        {
+          "title": "Driver Station",
+          "description": "If you are scouting the same driver station each match, choose here",
+          "type": "select",
+          "required": false,
+          "code": "driverStation",
+          "formResetBehavior": "preserve",
+          "defaultValue": "",
+          "choices": {
+            "R1": "Red 1",
+            "R2": "Red 2",
+            "R3": "Red 3",
+            "B1": "Blue 1",
+            "B2": "Blue 2",
+            "B3": "Blue 3"
+          }
         },
         {
           "title": "Match Number",
@@ -192,7 +209,7 @@
           "defaultValue": "No",
           "choices": {
             "No": "No Climb",
-            "Out": "Outpost Side",
+            "Out": "Output Side",
             "Mid": "Middle",
             "Dep": "Depot Side"
           }
@@ -316,7 +333,7 @@
           "defaultValue": "No",
           "choices": {
             "No": "No Climb",
-            "Out": "Outpost Side",
+            "Out": "Output Side",
             "Mid": "Middle",
             "Dep": "Depot Side"
           }
