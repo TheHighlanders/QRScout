@@ -2,7 +2,7 @@
   "title": "QRScout",
   "page_title": "Rebuilt",
   "delimiter": "\t",
-  "teamNumber": 3467,
+  "teamNumber": 6201,
   "floatingField": {
     "show": false,
     "codeValue": "teamNumber"
@@ -177,13 +177,8 @@
             {
               "label": "Stuck on fuel or bump",
               "code": "stuck"
-            },
-            {
-              "label": "Climbing",
-              "code": "climbing"
             }
-          ],
-          "timerDuration": 20
+          ]
         },
         {
           "title": "Climbed",
@@ -195,24 +190,19 @@
           "defaultValue": "No",
           "choices": {
             "No": "No Climb",
-            "Yes": "Climb",
-            "F": "Failed Climb"
+            "Yes": "Climb"
           }
         },
         {
-          "title": "Where Climbed",
-          "description": "Where on the tower did the robot climb in autonomous?",
-          "type": "select",
+          "title": "Auto Corrections",
+          "description": "If you missed anything in auto, please note it below!",
+          "type": "text",
           "required": false,
-          "code": "autoClimbPos",
+          "code": "autoCorrections",
           "formResetBehavior": "reset",
-          "defaultValue": "No",
-          "choices": {
-            "No": "No Climb",
-            "Out": "Output Side",
-            "Mid": "Middle",
-            "Dep": "Depot Side"
-          }
+          "defaultValue": "",
+          "min": 0,
+          "max": 100
         }
       ]
     },
@@ -245,26 +235,7 @@
               "label": "Defense",
               "code": "defense"
             }
-          ],
-          "timerDuration": 135
-        },
-        {
-          "title": "Crossed into opposite zone?",
-          "description": "Did the robot cross into the opposing alliance's zone?",
-          "type": "boolean",
-          "required": false,
-          "code": "crossedZone",
-          "formResetBehavior": "reset",
-          "defaultValue": false
-        },
-        {
-          "title": "Mechanical Issue?",
-          "description": "Did the robot have a mechanical issue during the match?",
-          "type": "boolean",
-          "required": false,
-          "code": "mechIssue",
-          "formResetBehavior": "reset",
-          "defaultValue": false
+          ]
         },
         {
           "title": "Stuck on fuel (less than 10 seconds)?",
@@ -294,13 +265,15 @@
           "defaultValue": false
         },
         {
-          "title": "Tipped/Fell Over",
-          "description": "Did the robot tip or fall over during the match?",
-          "type": "boolean",
+          "title": "Teleop Corrections",
+          "description": "If you missed anything in teleop, please note it below!",
+          "type": "text",
           "required": false,
-          "code": "tipped",
+          "code": "teleopCorrections",
           "formResetBehavior": "reset",
-          "defaultValue": false
+          "defaultValue": "",
+          "min": 0,
+          "max": 100
         }
       ]
     },
@@ -308,35 +281,56 @@
       "name": "Endgame",
       "fields": [
         {
+          "title": "Actions",
+          "description": "Track actions performed during Endgame (last 30 sec of the game where both hubs are active).",
+          "type": "action-tracker",
+          "required": false,
+          "code": "teleopActions",
+          "formResetBehavior": "reset",
+          "defaultValue": null,
+          "mode": "hold",
+          "actions": [
+            {
+              "label": "Scoring",
+              "code": "scoring"
+            },
+            {
+              "label": "Passing",
+              "code": "passing"
+            },
+            {
+              "label": "Robot Inactive",
+              "code": "robot inactive"
+            },
+            {
+              "label": "Defense",
+              "code": "defense"
+            }
+          ]
+        },
+        {
           "title": "Climbed",
-          "description": "The level the robot climbed during endgame.",
+          "description": "Did the robot climb during endgame?",
           "type": "select",
-          "required": true,
-          "code": "climbed",
+          "required": false,
+          "code": "endGameClimbed",
           "formResetBehavior": "reset",
           "defaultValue": "No",
           "choices": {
             "No": "No Climb",
-            "L1": "Level 1",
-            "L2": "Level 2",
-            "L3": "Level 3",
-            "F": "Failed Climb"
+            "Yes": "Climb"
           }
         },
         {
-          "title": "Where Climbed",
-          "description": "Where on the tower did the robot climb?",
-          "type": "select",
+          "title": "Endgame Corrections",
+          "description": "If you missed anything in endgame, please note it below!",
+          "type": "text",
           "required": false,
-          "code": "climbPos",
+          "code": "endGameCorrections",
           "formResetBehavior": "reset",
-          "defaultValue": "No",
-          "choices": {
-            "No": "No Climb",
-            "Out": "Output Side",
-            "Mid": "Middle",
-            "Dep": "Depot Side"
-          }
+          "defaultValue": "",
+          "min": 0,
+          "max": 100
         }
       ]
     },
@@ -345,7 +339,7 @@
       "fields": [
         {
           "title": "Scoring Accuracy (in 20% steps)",
-          "description": "Rate the robot's scoring effectiveness. 0 for no scoring, 1 is 20%, 2 is 40%, etc.",
+          "description": "Rate the robot's scoring effectiveness. 0 for no scoring, 1 is 20%, 2 is 40%, etc. Rough estimate is fine!",
           "type": "range",
           "required": false,
           "code": "scoringAcc",
@@ -354,38 +348,6 @@
           "min": 0,
           "max": 5,
           "step": 1
-        },
-        {
-          "title": "Defense Skill",
-          "description": "Rate the robot's defensive skill.",
-          "type": "range",
-          "required": false,
-          "code": "defSkill",
-          "formResetBehavior": "reset",
-          "defaultValue": 0,
-          "min": 0,
-          "max": 5,
-          "step": 1
-        },
-        {
-          "title": "Tags",
-          "description": "Add the tags if applicable to the robot for this match",
-          "type": "multi-select",
-          "required": false,
-          "code": "tags",
-          "formResetBehavior": "reset",
-          "choices": {
-            "Slow Driving": "Slow Driving",
-            "Fast Driving": "Fast Driving",
-            "Slow Intake": "Slow Intake",
-            "Fast Intake": "Fast Intake",
-            "Slow Scoring": "Slow Scoring",
-            "Fast Scoring": "Fast Scoring",
-            "Good at passing": "Good at passing",
-            "In the way": "In the way of partners",
-            "Good at pushing fuel": "Good at pushing fuel",
-            "Passed from opponent's zone": "Passed from opponent's zone"
-          }
         },
         {
           "title": "Comments",
